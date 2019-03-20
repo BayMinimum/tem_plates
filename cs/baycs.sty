@@ -1,0 +1,57 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{baycs}[Package for BayMinimum\'s CS Homeworks]
+
+\RequirePackage[a4paper,left=2.2cm,right=2.2cm,top=2cm,bottom=2cm]{geometry}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{kotex}
+\RequirePackage{enumerate}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{verbatim}
+\RequirePackage{mathtools}
+\RequirePackage{amsthm}
+\delimitershortfall=-1pt
+\PassOptionsToPackage{bitstream-charter}{mathdesign}
+\RequirePackage{mathdesign}
+\RequirePackage{fix-cm}
+
+\DeclareSymbolFont{cmsymbols}{OMS}{cmsy}{m}{n}
+\SetSymbolFont{cmsymbols}{bold}{OMS}{cmsy}{b}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{cmsymbols}
+
+\newenvironment{enumalph}{\begin{enumerate}[(a)]}{\end{enumerate}}
+\newenvironment{enuml1}{\begin{enumerate}[(1)]}{\end{enumerate}}
+\newenvironment{enuml2}{\begin{enumerate}[(\the\value{enumii}.1)]}{\end{enumerate}}
+\newenvironment{enuml3}{\begin{enumerate}[(\the\value{enumii}.\the\value{enumiii}.1)]}{\end{enumerate}}
+\newenvironment{enum01}{\begin{enumerate}[(1)]}{\end{enumerate}}
+\newenvironment{enum02}{\begin{enumerate}[(\the\value{enumi}.1)]}{\end{enumerate}}
+\newenvironment{enum03}{\begin{enumerate}[(\the\value{enumi}.\the\value{enumii}.1)]}{\end{enumerate}}
+
+\newcommand{\set[2]}{\{#2\}}
+\newcommand{\prnum[2]}{\noindent \LARGE{\textbf{#2.}} \large}
+\newcommand{\longset[4]}{\set{#2, #3, \dots, #4}}
+\newcommand{\gen[2]}{\langle #2 \rangle}
+\newcommand{\bo}{\mathop{\mathsmaller\bigoplus}}
+
+\DeclareMathOperator{\svert}{\,\vert\,}
+\DeclareMathOperator{\id}{id}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\newcommand{\makeboxedtitle}{
+    \makeatletter
+    \title{\vspace{-1.8em}\mytitle}
+	\begin{center}
+	\fbox{\begin{minipage}{\linewidth}
+			\textbf{\large{\course}}
+			\maketitle
+		\end{minipage}}
+	\end{center}
+	\vspace{1em}
+	\makeatother}
+
+\endinput
