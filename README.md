@@ -1,7 +1,7 @@
 # tem_plates
 My LaTeX templates
 
-## [baysics](/physics)
+## [baysics](/physlab)
 물리학실험 보고서를 작성하기 위한 템플릿입니다. 
 
 ## [baycs](/cs)
